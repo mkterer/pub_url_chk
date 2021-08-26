@@ -66,14 +66,14 @@ def get_target_link(soup):
     image_target_link = []
 
     #サムネ
-    div = soup.find(class_="")
+    div = soup.find(class_="p-intro__imgbox")
     if div != None:
         img = div.find('img')
         append_data = ['サムネ', img['src']]
         image_target_link.append(append_data)
 
     #画像アイテム
-    divs = soup.find_all(class_="type-image")
+    divs = soup.find_all(class_="p-item-image__image-block")
     for div in divs:
         if div != None:
             img = div.find('img')
